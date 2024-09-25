@@ -14,12 +14,14 @@ const ProductsPage = ({}) => {
     <div>
       <div>
         {" "}
-        <h1>Products</h1>
+        <h1 className="text-center text-blue-500 mt-[20px] text-3xl">
+          Products
+        </h1>
       </div>
-      <div>
-        {data.map((item) => {
-          <CardComponent item={item} key={item.id} />;
-        })}
+      <div className="flex gap-[20px] flex-wrap items-center justify-center text-center">
+        {data.map((item) => (
+          <CardComponent item={item} key={item.id} />
+        ))}
       </div>
     </div>
   );
